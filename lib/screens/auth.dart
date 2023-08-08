@@ -1,5 +1,8 @@
+import 'package:chat_app/widgets/user_image_picker.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'dart:io';
 
 final _firebase = FirebaseAuth.instance; // Initialize Firebase Authentication
 
@@ -14,12 +17,12 @@ class _AuthScreenState extends State<AuthScreen> {
   final _form = GlobalKey<FormState>(); // Key to access the form state
   var _enteredEmail = '';
   var _enteredPassword = '';
-  var _isLogin =
-      true; // A flag to track whether user is in login or sign-up mode
+  var _isLogin = true;
+  File? _selectedImage;
 
   void _submit() async {
     final isValid = _form.currentState!.validate(); // Validate form fields
-    if (!isValid) {
+    if (!_isLogin && _selectedImage == null || !isValid) {
       return; // If form is not valid, stop processing
     }
     _form.currentState!.save(); // Save the form fields' values
@@ -27,17 +30,21 @@ class _AuthScreenState extends State<AuthScreen> {
     try {
       if (_isLogin) {
         // Log user in (to be implemented)
-        final userCredential = await _firebase.signInWithEmailAndPassword(
+        final userCredentials = await _firebase.signInWithEmailAndPassword(
           email: _enteredEmail,
           password: _enteredPassword,
         );
-        print(userCredential);
       } else {
         final userCredentials = await _firebase.createUserWithEmailAndPassword(
           email: _enteredEmail,
           password: _enteredPassword,
         );
-        print(userCredentials); // Print user registration details
+        final storageRef = FirebaseStorage.instance
+            .ref()
+            .child('user_images')
+            .child('${userCredentials.user!.uid}.jpg');
+        await storageRef.putFile(_selectedImage!);
+        final imageUrl = await storageRef.getDownloadURL();
       }
     } on FirebaseAuthException catch (error) {
       // Handle Firebase authentication exceptions
@@ -83,6 +90,12 @@ class _AuthScreenState extends State<AuthScreen> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
+                          if (!_isLogin)
+                            UserImagePicker(
+                              onPickedImage: (pickedImage) {
+                                _selectedImage = pickedImage;
+                              },
+                            ),
                           TextFormField(
                             decoration: const InputDecoration(
                               labelText: 'Email Address',
