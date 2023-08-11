@@ -136,34 +136,34 @@ class _AuthScreenState extends State<AuthScreen> {
                           ),
                           TextFormField(
                             decoration:
-                                const InputDecoration(labelText: 'Username'),
-                            enableSuggestions: false,
+                                const InputDecoration(labelText: 'Password'),
                             validator: (value) {
-                              if (value == null ||
-                                  value.isEmpty ||
-                                  value.trim().length < 4) {
-                                return "Please enter at least 4 characters";
+                              if (value == null || value.trim().length < 6) {
+                                return 'Password must be at least 6 characters long.';
                               }
                               return null;
                             },
                             onSaved: (value) {
-                              _enteredUsername = value!;
+                              _enteredPassword = value!;
                             },
+                            obscureText: true,
                           ),
                           if (!_isLogin)
                             TextFormField(
                               decoration:
-                                  const InputDecoration(labelText: 'Password'),
+                                  const InputDecoration(labelText: 'Username'),
+                              enableSuggestions: false,
                               validator: (value) {
-                                if (value == null || value.trim().length < 8) {
-                                  return 'Password must be at least 8 characters long.';
+                                if (value == null ||
+                                    value.isEmpty ||
+                                    value.trim().length < 4) {
+                                  return "Please enter at least 4 characters";
                                 }
                                 return null;
                               },
                               onSaved: (value) {
-                                _enteredPassword = value!;
+                                _enteredUsername = value!;
                               },
-                              obscureText: true,
                             ),
                           const SizedBox(height: 12),
                           if (_isAuthenticating)
