@@ -59,6 +59,7 @@ You can find the full list of dependencies in the `pubspec.yaml` file.
 ## Contributors
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 1. Clone this repository to your local machine:
 
    ```bash
@@ -74,4 +75,8 @@ You can find the full list of dependencies in the `pubspec.yaml` file.
    git clone https://github.com/TimurSatarov/Chat-App.git
 >>>>>>> 3d4724ad16c7414e686f1d0c98cc03b083bb2308
 >>>>>>> 6aaf4f3 (commit)
+=======
+### Chat Screen
+![Chat Screen](img/screenshot_chat.png)
+>>>>>>> f467511 (initial commit)
 
