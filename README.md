@@ -1,34 +1,63 @@
-# chat_app
+# Chat App
 
-A new Flutter project.
+The Chat App is a Flutter-based application that enables users to engage in real-time chat conversations.
+
+![Chat App Screenshot](screenshot.png)
+
+## Table of Contents
+
+- [Description](#description)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Screenshots](#screenshots)
+- [Contributors](#contributors)
+- [License](#license)
+
+## Description
+
+The Chat App is designed to facilitate chat conversations between users. It supports user authentication, real-time messaging, and profile customization. The app is built using Flutter, Firebase for backend services, and incorporates various widgets to create a seamless chat experience.
+
+## Features
+
+- User authentication using Firebase Authentication.
+- Real-time messaging with Firebase Firestore.
+- User profile customization with profile images and usernames.
+- Responsive design for seamless usage across different devices.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To use the Chat App, follow these steps:
 
-A few resources to get you started if this is your first Flutter project:
+1. Clone this repository to your local machine.
+2. Ensure you have Flutter and Dart installed. If not, [install Flutter](https://flutter.dev/docs/get-started/install) and [set up your environment](https://flutter.dev/docs/get-started/install).
+3. Open the project in your preferred code editor.
+4. Initialize Firebase for your project and update the Firebase configuration in `lib/firebase_options.dart`.
+5. Customize and configure the app as needed using the provided code snippets.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Usage
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The Chat App is structured into different screens, including authentication, chat, and splash screens. It uses Firebase for authentication and real-time messaging, and incorporates various widgets such as `MessageBubble`, `NewMessage`, and `UserImagePicker` for UI components.
 
+## Dependencies
 
-# Firebase Authentication Flutter App
+- `firebase_core`
+- `firebase_auth`
+- `cloud_firestore`
+- `image_picker`
 
-This is a Flutter app that demonstrates Firebase authentication using the FirebaseAuth package. It allows users to log in or sign up using their email and password credentials.
+You can find the full list of dependencies in the `pubspec.yaml` file.
 
-## Prerequisites
+## Screenshots
 
-- Flutter: Make sure you have Flutter installed. If not, you can [install Flutter](https://flutter.dev/docs/get-started/install).
-- Firebase Project: You need to have a Firebase project set up. Follow the [Firebase documentation](https://firebase.flutter.dev/docs/overview) to create a new project and add your Firebase configuration to the app.
+### Sign-in Screen
+![Sign-in Screen](img/screenshot_login.png)
 
-## Getting Started
+### Sign-up Screen
+![Sign-up Screen](img/screenshot_sign-up.png)
+## Contributors
 
-1. Clone this repository to your local machine:
-
-   ```bash
-   git clone https://github.com/your-username/firebase-auth-flutter-app.git 
+### Chat Screen
+![Chat Screen](img/screenshot_chat.png)
 
