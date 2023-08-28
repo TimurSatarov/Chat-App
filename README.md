@@ -58,9 +58,8 @@ You can find the full list of dependencies in the `pubspec.yaml` file.
 ![Sign-up Screen](img/screenshot_sign-up.png)
 ## Contributors
 
-### Chat Screen
-![Chat Screen](img/screenshot_chat.png)
+1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/firebase-auth-flutter-app.git
+   git clone https://github.com/your-username/firebase-auth-flutter-app.git 
 
