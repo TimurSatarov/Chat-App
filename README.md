@@ -30,5 +30,5 @@ This is a Flutter app that demonstrates Firebase authentication using the Fireba
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/TimurSatarov/Messenger.git
+   git clone https://github.com/TimurSatarov/Chat-App.git
 
