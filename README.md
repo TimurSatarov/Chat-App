@@ -2,7 +2,8 @@
 
 The Chat App is a Flutter-based application that enables users to engage in real-time chat conversations.
 
-![Chat App Screenshot](./images/screenshot_chat.png)
+<!-- ![Chat App Screenshot](./images/screenshot_chat.png) -->
+<img src="./images/screenshot_chat.png" alt="Chat Screen" width="300">
 
 ## Table of Contents
 
@@ -52,7 +53,9 @@ You can find the full list of dependencies in the `pubspec.yaml` file.
 ## Screenshots
 
 ### Login Screen
-![Sign-in Screen](./images/screenshot_sign-in.png)
+<img src="./images/screenshot_sign-in.png" alt="Chat Screen" width="300">
+
+
 
 ### Sign-up Screen
-![Sign-up Screen](./images/screenshot_sign-up.png)
+<img src="./images/screenshot_sign-up.png" alt="Chat Screen" width="300">
