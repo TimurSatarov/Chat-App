@@ -2,7 +2,7 @@
 
 The Chat App is a Flutter-based application that enables users to engage in real-time chat conversations.
 
-![Chat App Screenshot](screenshot.png)
+![Chat App Screenshot](./images/screenshot_chat.png)
 
 ## Table of Contents
 
@@ -51,33 +51,8 @@ You can find the full list of dependencies in the `pubspec.yaml` file.
 
 ## Screenshots
 
-### Sign-in Screen
-![Sign-in Screen](img/screenshot_login.png)
+### Login Screen
+![Sign-in Screen](./images/screenshot_sign-in.png)
 
 ### Sign-up Screen
-![Sign-up Screen](img/screenshot_sign-up.png)
-## Contributors
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-1. Clone this repository to your local machine:
-
-   ```bash
-   git clone https://github.com/your-username/firebase-auth-flutter-app.git 
-=======
-<<<<<<< HEAD
-### Chat Screen
-![Chat Screen](img/screenshot_chat.png)
-=======
-1. Clone this repository to your local machine:
-
-   ```bash
-   git clone https://github.com/TimurSatarov/Chat-App.git
->>>>>>> 3d4724ad16c7414e686f1d0c98cc03b083bb2308
->>>>>>> 6aaf4f3 (commit)
-=======
-### Chat Screen
-![Chat Screen](img/screenshot_chat.png)
->>>>>>> f467511 (initial commit)
-
-## END 
+![Sign-up Screen](./images/screenshot_sign-up.png)
