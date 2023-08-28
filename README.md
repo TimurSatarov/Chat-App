@@ -61,3 +61,4 @@ You can find the full list of dependencies in the `pubspec.yaml` file.
 ### Chat Screen
 ![Chat Screen](img/screenshot_chat.png)
 
+## END 
