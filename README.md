@@ -80,3 +80,4 @@ You can find the full list of dependencies in the `pubspec.yaml` file.
 ![Chat Screen](img/screenshot_chat.png)
 >>>>>>> f467511 (initial commit)
 
+## END 
